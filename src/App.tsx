@@ -1,13 +1,17 @@
 import { useState } from 'react'
-import './App.css'
+import LittleMap from './components/LittleMap'
+import GlobalProvider from './components/Provider'
+import Home from './pages/home'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  
   return (
-    <div className="App">
-     222
-    </div>
+    <GlobalProvider>
+      <div className='w-screen h-screen relative'>
+        <Home />
+      </div>
+    </GlobalProvider>
   )
 }
 
